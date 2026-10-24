@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Admission Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Admission Portal</h1>
+            <p>Register and manage student admission records.</p>
+        </header>
+
+        <div class="form-container">
+            <h2>Student Registration</h2>
+
+            <form id="studentForm">
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name">
+                <small id="nameError"></small>
+
+                <label for="matric">Matric Number</label>
+                <input type="text" id="matric">
+                <small id="matricError"></small>
+
+                <label for="email">Email Address</label>
+                <input type="text" id="email">
+                <small id="emailError"></small>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone">
+                <small id="phoneError"></small>
+
+                <label for="age">Age</label>
+                <input type="number" id="age">
+                <small id="ageError"></small>
+
+                <label for="department">Department</label>
+                <select id="department">
+                    <option value="">Select Department</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                </select>
+                <small id="departmentError"></small>
+
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <small id="passwordError"></small>
+
+                <button type="submit">Register Student</button>
+
+            </form>
+        </div>
+
+        <div class="records-container">
+            <h2>Registered Students</h2>
+
+            <div class="total-box">
+                Total Students: <span id="totalStudents">0</span>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Matric Number</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Age</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">No students registered yet.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
